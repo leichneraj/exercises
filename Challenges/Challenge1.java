@@ -35,6 +35,6 @@ public class Challenge1 {
         int sat=Integer.parseInt(strSat);
         int avrg = ((sun + tue + wed + thur + fri + sat) / 7);
 
-        System.out.println("\n" + "Sunday's temperature: " + sun + "\n" + "\nMonday's temperature: " + mon + "\n" + "\nTuesday's temperature: " + tue + "\n" + "\nWednesday's temperature: " + wed + "\n" + "\nThrusday's temperature: " + thur + "\n" + "\nFriday's temperature: " + fri + "\n\nSaturday's temperature: " + sat + "\n\nWeekly Average temperature: " + avrg);
+        System.out.println("\nSunday's temperature: " + sun + "\n\nMonday's temperature: " + mon + "\n\nTuesday's temperature: " + tue + "\n\nWednesday's temperature: " + wed + "\n\nThrusday's temperature: " + thur + "\n\nFriday's temperature: " + fri + "\n\nSaturday's temperature: " + sat + "\n\nWeekly Average temperature: " + avrg);
     }
 }
