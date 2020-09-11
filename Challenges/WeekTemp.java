@@ -27,7 +27,7 @@ public class WeekTemp {
         int sat = scanner.nextInt();
 
         scanner.close();
-        double avrg = ((sun + tue + wed + thur + fri + sat) / 7.0);
+        double avrg = ((sun + mon + tue + wed + thur + fri + sat) / 7.0);
 
         System.out.println("\nSunday's temperature: " + sun + "\n\nMonday's temperature: " + mon + "\n\nTuesday's temperature: " + tue + "\n\nWednesday's temperature: " + wed + "\n\nThrusday's temperature: " + thur + "\n\nFriday's temperature: " + fri + "\n\nSaturday's temperature: " + sat + "\n\nWeekly Average temperature: " + avrg);
     }
