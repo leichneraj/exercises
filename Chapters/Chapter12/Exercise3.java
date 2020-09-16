@@ -64,11 +64,11 @@ public class Exercise3 {
                     System.out.println("There is 1 dime.");
                 } else if(dimes == 1 && dollars == 0 && quarters == 0 && (nickels > 0 || pennies > 0)) {
                     System.out.println("There is 1 dime");
-                } else if(dimes > 1 && (quarters > 0 || dollars > 0 ) && (nickels == 0 && pennies == 0)) {
+                } else if(dimes > 1 && (quarters > 0 || dollars > 0 ) && nickels == 0 && pennies == 0) {
                     System.out.println("and " + dimes + " dimes.");
                 } else if(dimes > 1 && (dollars > 0 || quarters > 0) && (nickels > 0 || pennies > 0)) {
                     System.out.println(dimes + " dimes,");
-                } else if(dimes == 1 && (dollars > 0 || quarters > 0 || nickels == 0 || pennies == 0)) {
+                } else if(dimes == 1 && (dollars > 0 || quarters > 0) && (nickels == 0 && pennies == 0)) {
                     System.out.println("and 1 dime.");
                 } else if(dimes == 1 && (dollars > 0 || quarters > 0) && (nickels > 0 || pennies > 0)) {
                     System.out.println("1 dime,");
