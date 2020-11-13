@@ -6,4 +6,5 @@ public class LunchAccountTester {
         joe.addBal(10.00); // Adds 10.02 to total
         System.out.println(joe.getName() + " (" + joe.getId() + ") Balance: \n$" + joe.getBal()); // Expecting: joe (1000) Balance: $50.0
     }
+    
 }

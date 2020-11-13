@@ -31,4 +31,12 @@ public class LunchAccount {
         this.bal = this.bal + addition;
     }
 
+    public void purchase(double amount) {
+        if(amount > 0) {
+            this.bal = this.bal - amount;
+        } else if(amount < 0) {
+            this.bal = this.bal + amount;
+        }
+    }
+
 }
