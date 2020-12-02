@@ -29,17 +29,31 @@ public class Color {
 
     }
 
-    public String darkenLighten() { // Starts darken/lighten commands
+    public void darken(int percentage) {
 
-        boolean darken = random.nextBoolean();
-        int percentage = random.nextInt(100);
-
-        this.redValue = darkenLighten(percentage, darken, this.redValue);
-        this.greenValue = darkenLighten(percentage, darken, this.greenValue);
-        this.blueValue = darkenLighten(percentage, darken, this.blueValue);
+        percentage = percentage * -1;
+        this.redValue = darkenLighten(percentage, this.redValue);
+        this.greenValue = darkenLighten(percentage, this.greenValue);
+        this.blueValue = darkenLighten(percentage, this.blueValue);
 
         adjustValues();
-        return (darken ? "\nDarkened by " : "\nLightened by ") + percentage + "%:";
+
+    }
+
+    public void lighten(int percentage) { 
+
+        this.redValue = darkenLighten(percentage, this.redValue);
+        this.greenValue = darkenLighten(percentage, this.greenValue);
+        this.blueValue = darkenLighten(percentage, this.blueValue);
+
+        adjustValues();
+
+    }
+
+    private int darkenLighten(int percentage, int colorValue) { // Darken/lighten color values
+
+        colorValue = colorValue + (colorValue * (percentage / 100));
+        return colorValue;
 
     }
 
@@ -68,18 +82,6 @@ public class Color {
         }
 
         return value;
-
-    }
-
-    private int darkenLighten(int percentage, boolean darken, int colorValue) { // Darken/lighten color values
-
-        if(darken) {
-            colorValue = colorValue - ((colorValue / 100) * percentage);
-        } else {
-            colorValue = colorValue + ((colorValue / 100) * percentage);
-        }
-
-        return colorValue;
 
     }
 
