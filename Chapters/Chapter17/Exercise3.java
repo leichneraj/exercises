@@ -12,6 +12,7 @@ public class Exercise3 {
         int items = scanner.nextInt();
         System.out.print("Time for one item: ");
         int seconds = scanner.nextInt();
+        scanner.close();
         
         if(items > 3) {
             System.out.println("Only three items allowed.");
