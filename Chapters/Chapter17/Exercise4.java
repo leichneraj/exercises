@@ -33,6 +33,7 @@ public class Exercise4 {
         } else if(luck < 1) {
             luck = 1;
         }
+        scanner.close();
 
         if((strength + health + luck) > 15) {
             strength = 5;
