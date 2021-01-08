@@ -3,23 +3,33 @@ import java.io.*;
 
 public class TodoApp {
 
-    private String description, dueDate;
-    private boolean completed = false;
-    private int priority;
-    
+    File list;
+    Scanner scanList;
+    public static void main(String[] args) {
+        TodoApp app = new TodoApp();
 
-    public TodoApp(String description, String dueDate, boolean completed, int priority) {
-        this.description = description;
-        this.dueDate = dueDate;
-        this.completed = completed;
-        this.priority = priority;
+        app.menu();
     }
 
-    public  void printToFile() {
+    public void menu() {
+        System.out.println("==--- TODO APP ---==\n\nCurrent tasks:");
         try {
-            PrintWriter list = new PrintWriter("list.csv");
+            scanList = new Scanner(list);
+
+            String[] tasks = scanList.nextLine().split(",");
+
+            int i = 0;
+            for(String task : tasks) {
+                if(i == 0 || (i )== 4) {
+
+                }
+                i++;
+            }
+
+            scanList.close();
         } catch(Exception e) {
-            e.printStackTrace();
+            System.out.println(e);
         }
     }
+
 }
