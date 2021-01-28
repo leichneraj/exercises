@@ -29,13 +29,13 @@ public class ComparisonSorts {
     }
 
     public static void sortUsing(int[] data, String method) {
-        // if(method.toLowerCase().equals("selection")) {
-        //     selectionSort(data);
-        // } else if(method.toLowerCase().equals("insertion")) {
-        //     insertionSort(data);
-        // } else {
+        if(method.toLowerCase().equals("selection")) {
+            selectionSort(data);
+        } else if(method.toLowerCase().equals("insertion")) {
+            insertionSort(data);
+        } else {
             bubbleSort(data);
-        // }
+        }
     }
 
     public static void printSortErrorMessage(String method, int[] data, int[] orig) {
